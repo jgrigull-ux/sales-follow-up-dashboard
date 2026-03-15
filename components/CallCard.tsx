@@ -13,6 +13,7 @@ type CallCardProps = {
   call: Call;
   isFollowUpCompleted?: boolean;
   onToggleFollowUpCompleted?: () => void;
+  onSfdcClick?: () => void;
 };
 
 function formatTime(iso: string): string {
@@ -37,6 +38,7 @@ export function CallCard({
   call,
   isFollowUpCompleted = false,
   onToggleFollowUpCompleted,
+  onSfdcClick,
 }: CallCardProps) {
   const hasSummary = call.summary && call.summary.trim().length > 0;
 
@@ -72,12 +74,14 @@ export function CallCard({
             >
               {isFollowUpCompleted ? 'Follow-up completed' : 'Follow-up pending'}
             </button>
-            <span
-              className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1.5 text-sm font-medium text-[var(--text)]"
+            <button
+              type="button"
+              onClick={onSfdcClick}
               aria-label="SFDC update pending"
+              className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1.5 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--accent)]"
             >
               SFDC update pending
-            </span>
+            </button>
           </div>
         )}
       </header>
