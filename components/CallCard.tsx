@@ -67,7 +67,23 @@ export function CallCard({
 
       {hasSummary ? (
         <div className="markdown-body">
-          <ReactMarkdown>{call.summary}</ReactMarkdown>
+          <ReactMarkdown
+            components={{
+              a: ({ href, children, ...props }) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="markdown-link"
+                  {...props}
+                >
+                  {children}
+                </a>
+              ),
+            }}
+          >
+            {call.summary}
+          </ReactMarkdown>
         </div>
       ) : (
         <p className="text-sm text-[var(--text-muted)] italic">
