@@ -2,36 +2,16 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { CallCard, type Call } from '@/components/CallCard';
+import { getCallId, getStorageKey, readStoredStatus } from '@/lib/followUpStorage';
 
 type Props = {
   date: string;
   calls: Call[];
+  /** Called when the user has marked all follow-up buttons complete (or not). */
+  onAllCompleteChange?: (allComplete: boolean) => void;
 };
 
-function getStorageKey(date: string): string {
-  return `follow-up-status:${date}`;
-}
-
-function getCallId(call: Call, index: number): string {
-  return `${call.email}|${call.start}|${call.eventTitle}|${index}`;
-}
-
-function readStoredStatus(date: string): Record<string, boolean> {
-  try {
-    const raw = window.localStorage.getItem(getStorageKey(date));
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as Record<string, unknown>;
-    const statusById: Record<string, boolean> = {};
-    for (const [id, value] of Object.entries(parsed)) {
-      statusById[id] = value === true;
-    }
-    return statusById;
-  } catch {
-    return {};
-  }
-}
-
-export function DayFollowUpList({ date, calls }: Props) {
+export function DayFollowUpList({ date, calls, onAllCompleteChange }: Props) {
   const callIds = useMemo(() => calls.map((call, i) => getCallId(call, i)), [calls]);
   const [isHydrated, setIsHydrated] = useState(false);
   const [completedById, setCompletedById] = useState<Record<string, boolean>>({});
@@ -53,6 +33,12 @@ export function DayFollowUpList({ date, calls }: Props) {
 
   const completedCount = callIds.reduce((count, id) => (completedById[id] ? count + 1 : count), 0);
   const totalCount = calls.length;
+  const allComplete = isHydrated && totalCount > 0 && completedCount === totalCount;
+
+  useEffect(() => {
+    if (!isHydrated) return;
+    onAllCompleteChange?.(allComplete);
+  }, [isHydrated, allComplete, onAllCompleteChange]);
 
   const toggleFollowUp = (id: string) => {
     setCompletedById((prev) => ({ ...prev, [id]: !prev[id] }));

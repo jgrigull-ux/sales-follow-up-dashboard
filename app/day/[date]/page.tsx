@@ -1,35 +1,8 @@
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
 import Link from 'next/link';
-import { DayDropdown } from '@/components/DayDropdown';
-import { DayFollowUpList } from '@/components/DayFollowUpList';
+import { DayDropdownWithStorage } from '@/components/DayDropdown';
+import { DayViewContent } from '@/components/DayViewContent';
 import { getAvailableDates } from '@/lib/dates';
-
-const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
-
-type DayData = {
-  date: string;
-  calls: Array<{
-    email: string;
-    displayName?: string;
-    eventTitle: string;
-    start: string;
-    end?: string | null;
-    summary: string;
-  }>;
-};
-
-function getDayData(date: string): DayData | null {
-  if (!DATE_REGEX.test(date)) return null;
-  const path = join(process.cwd(), 'data', `${date}.json`);
-  if (!existsSync(path)) return null;
-  try {
-    const raw = readFileSync(path, 'utf-8');
-    return JSON.parse(raw) as DayData;
-  } catch {
-    return null;
-  }
-}
+import { getDayData } from '@/lib/data';
 
 function formatDateTitle(dateStr: string): string {
   try {
@@ -40,14 +13,22 @@ function formatDateTitle(dateStr: string): string {
   }
 }
 
-export default function DayPage({
+export default async function DayPage({
   params,
 }: {
   params: { date: string };
 }) {
   const date = params.date;
-  const data = getDayData(date);
-  const availableDates = getAvailableDates();
+  const [data, availableDates] = await Promise.all([
+    getDayData(date),
+    getAvailableDates(),
+  ]);
+  const allDaysData = await Promise.all(
+    availableDates.map(async (d) => ({
+      date: d,
+      calls: (await getDayData(d))?.calls ?? [],
+    }))
+  );
 
   return (
     <main className="min-h-screen px-4 py-10 max-w-3xl mx-auto">
@@ -58,9 +39,9 @@ export default function DayPage({
         >
           ← Back
         </Link>
-        {availableDates.length > 0 && (
-          <DayDropdown
-            dates={availableDates}
+        {allDaysData.length > 0 && (
+          <DayDropdownWithStorage
+            allDaysData={allDaysData}
             defaultDate={date}
             showViewButton={false}
           />
@@ -83,12 +64,11 @@ export default function DayPage({
           </p>
         </div>
       ) : (
-        <>
-          <h1 className="text-2xl font-semibold text-[var(--text)] mb-8">
-            {formatDateTitle(data.date)}
-          </h1>
-          <DayFollowUpList date={data.date} calls={data.calls} />
-        </>
+        <DayViewContent
+          date={data.date}
+          dateTitle={formatDateTitle(data.date)}
+          calls={data.calls}
+        />
       )}
     </main>
   );

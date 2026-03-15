@@ -1,20 +1,25 @@
 #!/usr/bin/env node
 /**
  * Build day data: list external calendar calls for a date via gws CLI,
- * one representative external attendee per event. Writes data/<date>.json.
+ * one representative external attendee per event. Upserts into Supabase and
+ * optionally writes data/<date>.json.
  *
  * Usage: node scripts/build-day.mjs 2026-03-13
- * Env:   INTERNAL_DOMAIN (e.g. anysphere.co), TZ (optional, for day bounds)
+ * Env:   INTERNAL_DOMAIN (e.g. anysphere.co), TZ (optional), .env.local for Supabase
  */
 
 import { execFileSync } from 'child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+import { createClient } from '@supabase/supabase-js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const DATA_DIR = join(ROOT, 'data');
+
+dotenv.config({ path: join(ROOT, '.env.local') });
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -124,44 +129,80 @@ function buildCalls(eventsResponse, internalDomain) {
   return calls;
 }
 
-function mergeWithExisting(dateStr, newCalls) {
-  const path = join(DATA_DIR, `${dateStr}.json`);
-  if (!existsSync(path)) return newCalls.map((c) => ({ ...c, summary: '' }));
+function key(c) {
+  return `${c.eventTitle}|${c.start}|${c.email}`;
+}
 
-  let existing;
-  try {
-    existing = JSON.parse(readFileSync(path, 'utf-8'));
-  } catch {
-    return newCalls.map((c) => ({ ...c, summary: '' }));
-  }
+async function mergeWithExisting(supabase, dateStr, newCalls) {
+  const { data: existingRows } = await supabase
+    .from('calls')
+    .select('email, display_name, event_title, start, end, summary')
+    .eq('date', dateStr);
 
-  const key = (c) => `${c.eventTitle}|${c.start}|${c.email}`;
-  const byKey = new Map((existing.calls || []).map((c) => [key(c), c]));
+  const existingCalls = (existingRows || []).map((r) => ({
+    email: r.email,
+    displayName: r.display_name ?? undefined,
+    eventTitle: r.event_title,
+    start: r.start,
+    end: r.end ?? null,
+    summary: r.summary ?? '',
+  }));
+  const byKey = new Map(existingCalls.map((c) => [key(c), c]));
   return newCalls.map((c) => {
     const prev = byKey.get(key(c));
     return {
       ...c,
-      summary: (prev && prev.summary) ? prev.summary : '',
+      summary: prev && prev.summary ? prev.summary : '',
     };
   });
 }
 
-function main() {
+function toRow(dateStr, call) {
+  return {
+    date: dateStr,
+    email: call.email,
+    display_name: call.displayName || null,
+    event_title: call.eventTitle,
+    start: call.start,
+    end: call.end ?? null,
+    summary: call.summary ?? '',
+  };
+}
+
+async function main() {
   const dateStr = parseArgs();
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) {
+    console.error('Missing Supabase env. Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env.local');
+    process.exit(1);
+  }
+  const supabase = createClient(url, serviceKey);
+
   const internalDomain = process.env.INTERNAL_DOMAIN || '';
   const tz = process.env.TZ || 'America/Los_Angeles';
 
   const { timeMin, timeMax } = getDayBounds(dateStr, tz);
   const response = runGws(timeMin, timeMax);
   const newCalls = buildCalls(response, internalDomain);
-  const calls = mergeWithExisting(dateStr, newCalls);
+  const calls = await mergeWithExisting(supabase, dateStr, newCalls);
+
+  const rows = calls.map((c) => toRow(dateStr, c));
+  const { error } = await supabase
+    .from('calls')
+    .upsert(rows, { onConflict: 'date,email,start,event_title' });
+
+  if (error) {
+    console.error('Supabase upsert failed:', error.message);
+    process.exit(1);
+  }
+  console.log(`Upserted ${calls.length} call(s) for ${dateStr} to Supabase`);
 
   if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true });
-
   const output = { date: dateStr, calls };
   const outPath = join(DATA_DIR, `${dateStr}.json`);
   writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf-8');
-  console.log(`Wrote ${outPath} (${calls.length} call(s))`);
+  console.log(`Wrote ${outPath}`);
 }
 
 main();
