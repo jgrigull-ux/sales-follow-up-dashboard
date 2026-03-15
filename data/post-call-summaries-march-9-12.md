@@ -144,7 +144,7 @@ Inefficiency and cost from unused seats and lack of pooled usage on Teams, leadi
 ## Post Call Summary — Alef Viola (alef.viola@agrotools.com.br)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000weYWDIA2/view
 - **Gong Call:** Not found
 - **Primary Team ID (best guess):** Not applicable
 - **Any Usage (last 30 days):** Not applicable
@@ -165,10 +165,10 @@ N/A
 ## Post Call Summary — Anton (arevich@flow.life)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000sqCSfIAM/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=5467126540961820000
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 8408857
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=8408857&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -192,10 +192,10 @@ Flow Life leadership is concerned about losing a $20 credit and wants to optimiz
 ## Post Call Summary — Ashish Zanwar (ashish.zanwar@freightify.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000wnRgpIAE/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=4806055016114229103
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 20741807
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=20741807&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -218,7 +218,7 @@ Need for a scalable, centralized way to share AI context and track AI-generated 
 ## Post Call Summary — Bobby Mitchell (bmitchell@goamur.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000tUoB5IAK/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=836068571116442240
 - **Primary Team ID (best guess):** Not applicable
 - **Any Usage (last 30 days):** Not applicable
@@ -244,10 +244,10 @@ Ensuring secure, enterprise-grade admin control and integration with Salesforce 
 ## Post Call Summary — Boaz (boaz@treedis.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002Ez50dIAB/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=376846643061666115
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 17388673
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=17388673&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -268,10 +268,10 @@ Treedis wants better analytics and simpler invoicing but is concerned about the 
 ## Post Call Summary — Brian Anderson (brian.anderson@uperform.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000tEy6HIAS/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=2939315589825285508
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 18422405
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=18422405&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -293,10 +293,10 @@ Complexity and inconvenience of billing on Teams—large number of invoices from
 ## Post Call Summary — Brian Gonzalez (brian.gonzalez@curri.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000t9UAUIA2/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=608913767901426953
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 1080933
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=1080933&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -318,10 +318,10 @@ Need for better admin controls, analytics, and cost optimization as Curri scales
 ## Post Call Summary — Covalense (cds-it@covalensedigital.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002CQuIMIA1/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=8034743535642547352
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 12923053
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=12923053&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -343,10 +343,10 @@ Inability to efficiently manage and optimize usage, cost, and admin controls for
 ## Post Call Summary — Chanaka (chanaka@orangehrm.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002FFbDTIA1/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=4609352283190383122
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 4734993
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=4734993&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -398,10 +398,10 @@ Even with workarounds, Cloud Agents still send PHI to the cloud, which is not ac
 ## Post Call Summary — Ettore (ettore@amphoralogistics.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000t8WRHIA2/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=3823312153792952999
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 7715157
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=7715157&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -426,7 +426,7 @@ Amphora Logistics is concerned about a significant increase in costs due to the 
 ## Post Call Summary — Ezequiel Morani (ezequiel.morani@lamercantil.com.ar)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000uGOEVIA4/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=3167302287746754460
 - **Primary Team ID (best guess):** Not applicable
 - **Any Usage (last 30 days):** Not applicable
@@ -453,10 +453,10 @@ Uncertainty about which licensing model (individual ProPlus vs. Teams) is most c
 ## Post Call Summary — Felipe Munoz (felipe.munoz@servinformacion.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002FFbiHIAT/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=5065528789900933584
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 10524858
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=10524858&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -479,10 +479,10 @@ Servinformacion is unable to restrict usage/spend per person on their current pl
 ## Post Call Summary — György Varga (gyorgy.varga@shiwaforce.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002HRmJWIA1/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=982552022319616354
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 12715857
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=12715857&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -512,10 +512,10 @@ Lack of granular control over individual/team usage and spending limits in the c
 ## Post Call Summary — Ilia (ilia@hermeneutic.investments)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000t7jghIAA/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=5010718042424283566
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 1517033
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=1517033&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -541,10 +541,10 @@ Evaluating whether to move from Teams to Enterprise—seeking clarity on cost st
 ## Post Call Summary — Imga (imga@rushstreetinteractive.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002CS8pOIAT/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=8127352102732680026
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 14651113
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=14651113&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -571,10 +571,10 @@ Need for robust security, legal, and regulatory assurances to satisfy internal a
 ## Post Call Summary — John Thompson (john.thompson@idahosif.org)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000w7nqcIAA/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=3618954834583548814
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 15980474
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=15980474&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -606,10 +606,10 @@ Idaho SIF wants strong security and administrative controls for a small team (12
 ## Post Call Summary — Kazuhiro Takaya (k.takaya.6f@future.co.jp)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000tXHaIIAW/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=2055250026142247229
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 13669413
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=13669413&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -638,10 +638,10 @@ Difficulty in establishing effective real-time communication due to lack of fami
 ## Post Call Summary — Matt Hellwinkel (mhellwinkel@figure.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002FFbLdIAL/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=4013401813661897858
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 12637157
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=12637157&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -666,10 +666,10 @@ Difficulty managing and predicting billing/usage due to lack of granular control
 ## Post Call Summary — Milan Pandey (milan.pandey@oxanepartners.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002Ez9kHIAR/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=3254916744759415955
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 19733705
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=19733705&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -693,10 +693,10 @@ Oxane wanted clarity on the onboarding process, cost structure for different use
 ## Post Call Summary — Rita (rita@revenuecat.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000rZEjAIAW/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=6928443963149396117
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 1369633
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=1369633&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -721,10 +721,10 @@ RevenueCat needs clarity on contract structure, pricing, and how to optimize cos
 ## Post Call Summary — Scott Bennett (scott.bennett@labor.idaho.gov)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000qqlWPIAY/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=1288017574329266875
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 22052807
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=22052807&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -760,10 +760,10 @@ Ensuring proper security and compliance for a government agency—protecting sen
 ## Post Call Summary — Spanchan (spanchan@picarro.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001Hr00002FFbjoIAD/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=7602300776275962607
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 12544757
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=12544757&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
@@ -788,10 +788,10 @@ Picarro is experiencing higher-than-expected Cursor usage and associated costs, 
 ## Post Call Summary — Yoav Tzipori (yoav.tzipori@immunai.com)
 
 **Links**
-- **Salesforce Account:** Not found
+- **Salesforce Account:** https://cursor.lightning.force.com/lightning/r/Account/001V400000on9OqIAI/view
 - **Gong Call:** https://us-4796.app.gong.io/call?id=8505113748733708830
-- **Primary Team ID (best guess):** Not applicable
-- **Any Usage (last 30 days):** Not applicable
+- **Primary Team ID (best guess):** 13650213
+- **Any Usage (last 30 days):** [View usage](https://anyusage.fieldsphere.app/?teamId=13650213&start_date=2026-02-13&end_date=2026-03-14)
 
 ---
 
