@@ -127,9 +127,25 @@ h1, h2 {
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 .markdown-body a:hover,
 .markdown-body .markdown-link:hover {
   text-decoration: underline;
+}
+
+.markdown-body .markdown-link-inactive {
+  color: var(--text-muted);
+  cursor: default;
+  text-decoration: none;
+}
+
+.markdown-body .markdown-favicon {
+  height: 1.25em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 0.25em;
 }

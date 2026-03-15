@@ -114,10 +114,10 @@ export function DayDropdown({ dates = [], defaultDate, completeDates = [], showV
         <button
           type="button"
           onClick={() => value && router.push(`/day/${value}`)}
-          className={`w-full sm:w-auto px-5 py-3 rounded-xl font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--bg)] ${
+          className={`w-full sm:w-auto shrink-0 rounded-xl border px-4 py-3 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent ${
             isCurrentDayComplete
-              ? 'bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500'
-              : 'bg-[var(--accent)] text-white hover:opacity-90 focus:ring-[var(--accent)]'
+              ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/20 dark:hover:bg-emerald-500/30'
+              : 'border-[var(--border)] bg-[var(--card)] text-[var(--text)] hover:border-[var(--accent)] hover:bg-[var(--bg)]'
           }`}
         >
           View day

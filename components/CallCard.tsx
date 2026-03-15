@@ -24,6 +24,15 @@ function formatTime(iso: string): string {
   }
 }
 
+/** Replace Links section labels with favicon + shortened text so markdown renders icon inline. */
+function preprocessSummaryForFavicons(summary: string): string {
+  return summary
+    .replace(/\*\*Salesforce Account:\*\*/g, '![Salesforce](/favicons/salesforce.png) **Account:**')
+    .replace(/\*\*Gong Call:\*\*/g, '![Gong](/favicons/gong.png) **Call:**')
+    .replace(/\*\*Any Usage \(last 30 days\):\*\*/g, '![Cursor](/favicons/cursor.png) **Usage (last 30 days):**')
+    .replace(/\*\*Any Usage:\*\*/g, '![Cursor](/favicons/cursor.png) **Usage:**');
+}
+
 export function CallCard({
   call,
   isFollowUpCompleted = false,
@@ -66,23 +75,47 @@ export function CallCard({
       </header>
 
       {hasSummary ? (
-        <div className="markdown-body">
+        <div className="markdown-body relative z-0">
           <ReactMarkdown
+            urlTransform={(url) => {
+              if (!url || typeof url !== 'string') return undefined;
+              const trimmed = url.trim();
+              if (/^https?:\/\//i.test(trimmed)) return trimmed;
+              if (trimmed.startsWith('/')) return trimmed;
+              return undefined;
+            }}
             components={{
-              a: ({ href, children, ...props }) => (
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="markdown-link"
-                  {...props}
-                >
-                  {children}
-                </a>
-              ),
+              a: ({ href, children, ...props }) => {
+                const safeHref = href && typeof href === 'string' && href.startsWith('http') ? href : undefined;
+                if (!safeHref) {
+                  return <span className="markdown-link-inactive">{children}</span>;
+                }
+                return (
+                  <a
+                    {...props}
+                    href={safeHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="markdown-link"
+                  >
+                    {children}
+                  </a>
+                );
+              },
+              img: ({ src, alt, ...props }) => {
+                const isFavicon = src?.includes('/favicons/');
+                return (
+                  <img
+                    {...props}
+                    src={src}
+                    alt={alt ?? ''}
+                    className={isFavicon ? 'markdown-favicon' : undefined}
+                  />
+                );
+              },
             }}
           >
-            {call.summary}
+            {preprocessSummaryForFavicons(call.summary)}
           </ReactMarkdown>
         </div>
       ) : (
