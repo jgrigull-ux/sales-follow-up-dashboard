@@ -1,8 +1,8 @@
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import Link from 'next/link';
-import { CallCard } from '@/components/CallCard';
 import { DayDropdown } from '@/components/DayDropdown';
+import { DayFollowUpList } from '@/components/DayFollowUpList';
 import { getAvailableDates } from '@/lib/dates';
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
@@ -87,13 +87,7 @@ export default function DayPage({
           <h1 className="text-2xl font-semibold text-[var(--text)] mb-8">
             {formatDateTitle(data.date)}
           </h1>
-          <ul className="space-y-6 list-none p-0 m-0">
-            {data.calls.map((call, i) => (
-              <li key={`${call.email}-${call.start}-${i}`}>
-                <CallCard call={call} />
-              </li>
-            ))}
-          </ul>
+          <DayFollowUpList date={data.date} calls={data.calls} />
         </>
       )}
     </main>
