@@ -59,18 +59,26 @@ export function CallCard({
           </p>
         </div>
         {onToggleFollowUpCompleted && (
-          <button
-            type="button"
-            onClick={onToggleFollowUpCompleted}
-            aria-pressed={isFollowUpCompleted}
-            className={`shrink-0 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
-              isFollowUpCompleted
-                ? 'border-emerald-600 bg-emerald-600 text-white'
-                : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text)] hover:border-[var(--accent)]'
-            }`}
-          >
-            {isFollowUpCompleted ? 'Follow-up completed' : 'Follow-up pending'}
-          </button>
+          <div className="flex shrink-0 flex-col gap-2 items-end">
+            <button
+              type="button"
+              onClick={onToggleFollowUpCompleted}
+              aria-pressed={isFollowUpCompleted}
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                isFollowUpCompleted
+                  ? 'border-emerald-600 bg-emerald-600 text-white'
+                  : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text)] hover:border-[var(--accent)]'
+              }`}
+            >
+              {isFollowUpCompleted ? 'Follow-up completed' : 'Follow-up pending'}
+            </button>
+            <span
+              className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1.5 text-sm font-medium text-[var(--text)]"
+              aria-label="SFDC update pending"
+            >
+              SFDC update pending
+            </span>
+          </div>
         )}
       </header>
 
@@ -78,21 +86,28 @@ export function CallCard({
         <div className="markdown-body relative z-0">
           <ReactMarkdown
             urlTransform={(url) => {
-              if (!url || typeof url !== 'string') return undefined;
+              if (!url || typeof url !== 'string') return url;
               const trimmed = url.trim();
-              if (/^https?:\/\//i.test(trimmed)) return trimmed;
-              if (trimmed.startsWith('/')) return trimmed;
-              return undefined;
+              if (/^https?:\/\//i.test(trimmed) || trimmed.startsWith('/')) return trimmed;
+              return url;
             }}
             components={{
-              a: ({ href, children, ...props }) => {
-                const safeHref = href && typeof href === 'string' && href.startsWith('http') ? href : undefined;
+              a: (props) => {
+                const { children, node, ...rest } = props;
+                const rawHref =
+                  (typeof props.href === 'string' ? props.href : null) ??
+                  (node?.properties?.href && typeof node.properties.href === 'string'
+                    ? node.properties.href
+                    : null);
+                const href = rawHref ? rawHref.trim() : '';
+                const safeHref =
+                  href && /^https?:\/\//i.test(href) ? href : undefined;
                 if (!safeHref) {
                   return <span className="markdown-link-inactive">{children}</span>;
                 }
                 return (
                   <a
-                    {...props}
+                    {...rest}
                     href={safeHref}
                     target="_blank"
                     rel="noopener noreferrer"
