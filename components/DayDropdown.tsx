@@ -82,7 +82,7 @@ export function DayDropdown({ dates = [], defaultDate, completeDates = [], showV
           onChange={handleChange}
           className={`w-full rounded-xl border px-4 py-3 text-base font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent ${
             isCurrentDayComplete
-              ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200 dark:bg-emerald-500/20 dark:border-emerald-400/30'
+              ? 'border-[var(--accent)] bg-[var(--card)] text-[var(--text)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]'
               : 'border-[var(--border)] bg-[var(--card)] text-[var(--text)]'
           }`}
           style={{
@@ -103,7 +103,7 @@ export function DayDropdown({ dates = [], defaultDate, completeDates = [], showV
         </select>
         {isCurrentDayComplete && (
           <span
-            className="absolute right-10 top-1/2 -translate-y-1/2 pointer-events-none text-emerald-600 dark:text-emerald-400"
+            className="absolute right-10 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--accent)]"
             aria-hidden
           >
             ✓
@@ -116,7 +116,7 @@ export function DayDropdown({ dates = [], defaultDate, completeDates = [], showV
           onClick={() => value && router.push(`/day/${value}`)}
           className={`w-full sm:w-auto shrink-0 rounded-xl border px-4 py-3 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent ${
             isCurrentDayComplete
-              ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/20 dark:hover:bg-emerald-500/30'
+              ? 'border-[var(--accent)] bg-[var(--card)] text-[var(--text)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] hover:bg-[var(--bg)]'
               : 'border-[var(--border)] bg-[var(--card)] text-[var(--text)] hover:border-[var(--accent)] hover:bg-[var(--bg)]'
           }`}
         >
