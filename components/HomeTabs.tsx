@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { DayDropdown } from '@/components/DayDropdown';
+import { FollowUpSearch } from '@/components/FollowUpSearch';
 import { PendingFollowUpTab } from '@/components/PendingFollowUpTab';
 import type { Call } from '@/components/CallCard';
 import type { DayWithPending } from '@/lib/data';
@@ -57,11 +58,13 @@ export function HomeTabsWithStorage({ allDaysData }: HomeTabsWithStorageProps) {
   }, [allDaysData]);
 
   return (
-    <HomeTabs
-      dates={dates}
-      daysWithPending={daysWithPending}
-      completeDates={completeDates}
-    />
+    <FollowUpSearch allDaysData={allDaysData}>
+      <HomeTabs
+        dates={dates}
+        daysWithPending={daysWithPending}
+        completeDates={completeDates}
+      />
+    </FollowUpSearch>
   );
 }
 
