@@ -1,0 +1,104 @@
+{
+  "date": "2026-03-09",
+  "calls": [
+    {
+      "email": "nwadhwani@cursor.com",
+      "eventTitle": "Angus in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "start": "2026-02-27",
+      "end": "2026-03-09",
+      "summary": ""
+    },
+    {
+      "email": "nir.edelman@fundbox.com",
+      "eventTitle": "Cursor <> Fundbox | React Migration Enablement",
+      "start": "2026-03-09T06:00:00-07:00",
+      "end": "2026-03-09T07:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "sebastien.loos@quodfinancial.com",
+      "eventTitle": "Cursor Introduction: Jon <> Sebastien",
+      "start": "2026-03-09T07:30:00-07:00",
+      "end": "2026-03-09T08:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "zachary.drillings@atria.org",
+      "eventTitle": "Cursor Introduction: Jon <> Zachary",
+      "start": "2026-03-09T08:00:00-07:00",
+      "end": "2026-03-09T08:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "khalid@geekyants.com",
+      "displayName": "Khalid Imam",
+      "eventTitle": "Cursor Introduction: Jon <> Khalid",
+      "start": "2026-03-09T10:00:00-07:00",
+      "end": "2026-03-09T10:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "natalia.charniauski@prove.com",
+      "eventTitle": "Cursor Introduction: Jon <> Natalia",
+      "start": "2026-03-09T11:00:00-07:00",
+      "end": "2026-03-09T11:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "ezequiel.morani@lamercantil.com.ar",
+      "eventTitle": "Cursor Introduction: Jon <> Ezequiel",
+      "start": "2026-03-09T11:30:00-07:00",
+      "end": "2026-03-09T12:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "ken.cavanagh@glean.com",
+      "eventTitle": "Cursor <> Glean feedback + strategy",
+      "start": "2026-03-09T12:30:00-07:00",
+      "end": "2026-03-09T13:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "jgrigull@anysphere.co",
+      "eventTitle": "Jon / Max : Weekly",
+      "start": "2026-03-09T13:00:00-07:00",
+      "end": "2026-03-09T13:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "john.thompson@idahosif.org",
+      "eventTitle": "Cursor Introduction: Jon <> John",
+      "start": "2026-03-09T13:30:00-07:00",
+      "end": "2026-03-09T14:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "guy.flenner@novidea.com",
+      "eventTitle": "Cursor Introduction: Jon <> Guy",
+      "start": "2026-03-09T14:00:00-07:00",
+      "end": "2026-03-09T14:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "scott.bennett@labor.idaho.gov",
+      "eventTitle": "Cursor Introduction: Jon <> Scott",
+      "start": "2026-03-09T14:30:00-07:00",
+      "end": "2026-03-09T15:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "k.takaya.6f@future.co.jp",
+      "eventTitle": "Cursor Introduction: Jon <> Kazuhiro",
+      "start": "2026-03-09T15:00:00-07:00",
+      "end": "2026-03-09T15:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "spanchan@picarro.com",
+      "eventTitle": "Cursor <> Picarro | Finance discussion",
+      "start": "2026-03-09T16:00:00-07:00",
+      "end": "2026-03-09T16:45:00-07:00",
+      "summary": ""
+    }
+  ]
+}

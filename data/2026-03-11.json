@@ -1,0 +1,62 @@
+{
+  "date": "2026-03-11",
+  "calls": [
+    {
+      "email": "chanaka@orangehrm.com",
+      "eventTitle": "Cursor Introduction: Jon <> Chanaka",
+      "start": "2026-03-11T08:00:00-07:00",
+      "end": "2026-03-11T08:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "dustin.pearson@atria.org",
+      "eventTitle": "Cursor Introduction: Jon <> Dustin",
+      "start": "2026-03-11T08:30:00-07:00",
+      "end": "2026-03-11T09:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "gyorgy.varga@shiwaforce.com",
+      "eventTitle": "Cursor Introduction: Jon<> György",
+      "start": "2026-03-11T08:30:00-07:00",
+      "end": "2026-03-11T09:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "arevich@flow.life",
+      "eventTitle": "Cursor intro: Jon<> Anton",
+      "start": "2026-03-11T13:00:00-07:00",
+      "end": "2026-03-11T13:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "m.almadhoun@walaplus.com",
+      "eventTitle": "Cursor Introduction: Jon <> Mohamed",
+      "start": "2026-03-11T13:30:00-07:00",
+      "end": "2026-03-11T14:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "edvin.curban@softeh.ro",
+      "eventTitle": "Cursor Introduction: Jon <> Edvin",
+      "start": "2026-03-11T14:00:00-07:00",
+      "end": "2026-03-11T14:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "felipe.munoz@servinformacion.com",
+      "displayName": "Felipe Muñoz",
+      "eventTitle": "Cursor Introduction: Jon <> Luis",
+      "start": "2026-03-11T14:30:00-07:00",
+      "end": "2026-03-11T15:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "mhellwinkel@figure.com",
+      "eventTitle": "Cursor Introduction: Jon <> Matt",
+      "start": "2026-03-11T15:00:00-07:00",
+      "end": "2026-03-11T15:30:00-07:00",
+      "summary": ""
+    }
+  ]
+}

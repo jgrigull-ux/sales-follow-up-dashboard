@@ -1,0 +1,61 @@
+{
+  "date": "2026-03-10",
+  "calls": [
+    {
+      "email": "brian.anderson@uperform.com",
+      "eventTitle": "Cursor Introduction: Jon <> Brian",
+      "start": "2026-03-10T07:30:00-07:00",
+      "end": "2026-03-10T08:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "jgrigull@anysphere.co",
+      "eventTitle": "Cursor: Oxane Enterprise License",
+      "start": "2026-03-10T08:00:00-07:00",
+      "end": "2026-03-10T08:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "ettore@amphoralogistics.com",
+      "eventTitle": "Cursor Introduction: Jon <> Ettore",
+      "start": "2026-03-10T08:00:00-07:00",
+      "end": "2026-03-10T08:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "boaz@treedis.com",
+      "eventTitle": "Cursor Introduction: Jon <> Boaz",
+      "start": "2026-03-10T10:00:00-07:00",
+      "end": "2026-03-10T10:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "cds-it@covalensedigital.com",
+      "eventTitle": "Cursor Introduction: Jon <> Covalense",
+      "start": "2026-03-10T10:30:00-07:00",
+      "end": "2026-03-10T11:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "brian.gonzalez@curri.com",
+      "eventTitle": "Cursor Introduction: Jon <> Brian",
+      "start": "2026-03-10T14:00:00-07:00",
+      "end": "2026-03-10T14:30:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "shashank.shetti@pgn.com",
+      "eventTitle": "Cursor Introduction: Jon <> shashank",
+      "start": "2026-03-10T14:30:00-07:00",
+      "end": "2026-03-10T15:00:00-07:00",
+      "summary": ""
+    },
+    {
+      "email": "imga@rushstreetinteractive.com",
+      "eventTitle": "Cursor Introduction: Jon <> Mehmet",
+      "start": "2026-03-10T15:00:00-07:00",
+      "end": "2026-03-10T15:30:00-07:00",
+      "summary": ""
+    }
+  ]
+}
