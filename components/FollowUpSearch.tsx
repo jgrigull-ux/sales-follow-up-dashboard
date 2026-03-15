@@ -91,8 +91,8 @@ export function FollowUpSearch({ allDaysData, children }: Props) {
 
   return (
     <div className="w-full max-w-2xl">
-      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-        <label className="flex-1">
+      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-stretch">
+        <label className="flex-1 min-w-0">
           <span className="sr-only">Search tasks</span>
           <input
             type="search"
@@ -103,12 +103,14 @@ export function FollowUpSearch({ allDaysData, children }: Props) {
             aria-label="Search tasks"
           />
         </label>
-        <label className="flex shrink-0 items-center gap-2 text-sm text-[var(--text)]">
+        <label
+          className="flex shrink-0 cursor-pointer items-center gap-2.5 rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-2.5 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--accent)] focus-within:ring-2 focus-within:ring-[var(--accent)] focus-within:outline-none"
+        >
           <input
             type="checkbox"
             checked={pendingOnly}
             onChange={(e) => setPendingOnly(e.target.checked)}
-            className="rounded border-[var(--border)]"
+            className="h-4 w-4 shrink-0 rounded border-[var(--border)] bg-[var(--bg)] accent-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-0"
           />
           Pending only
         </label>
