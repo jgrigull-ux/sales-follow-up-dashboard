@@ -42,7 +42,8 @@ function computeFromStorage(allDaysData: AllDaysData): {
     }
   }
 
-  return { dates, completeDates, daysWithPending };
+  // Oldest first so the most overdue follow-ups appear at the top
+  return { dates, completeDates, daysWithPending: daysWithPending.slice().reverse() };
 }
 
 export function HomeTabsWithStorage({ allDaysData }: HomeTabsWithStorageProps) {
