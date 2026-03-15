@@ -26,6 +26,15 @@ Standard commands from `package.json`:
 - **Build:** `npm run build`
 - **Dev:** `npm run dev`
 
+### External CLIs
+
+Two external CLIs are used by data pipeline scripts and the post-call-follow-up skill:
+
+- **Google Workspace CLI (`gws`)** — used by `scripts/build-day.mjs` to pull calendar events. Install: `npm install -g @googleworkspace/cli`. Requires authentication (`gws auth login`) before use.
+- **Salesforce CLI (`sf`)** — used by the post-call-follow-up skill to look up accounts/team IDs. Install: `npm install -g @salesforce/cli`. Requires authentication (`sf org login web`) before use.
+
+Both CLIs require separate authentication that cannot be automated in the update script.
+
 ### Non-obvious caveats
 
 - `next lint` requires an `.eslintrc.json` file to run non-interactively. If missing, create one with `{"extends": "next/core-web-vitals"}`.
